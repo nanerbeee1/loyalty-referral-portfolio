@@ -32,10 +32,12 @@
 
 /* BODY */
 body {
-  background: var(--light);
+  background: linear-gradient(135deg, #f3f4f6, #e0e7ff);
   color: var(--dark);
   line-height: 1.6;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
 }
+
 
 /* HEADER */
 header {
@@ -55,16 +57,14 @@ nav {
   background: var(--white);
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  padding: 1rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  gap: 3rem;
+  padding: 1.25rem 1rem;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.06);
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
 }
 
-nav a {
-  text-decoration: none;
-  color: var(--dark)
-
-}
 /* INTERACTIVE ISSUES */
 .issue {
   cursor: pointer;
@@ -83,3 +83,47 @@ nav a {
 .hidden {
   display: none;
 }
+
+.card {
+  background: var(--white);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+footer p a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer p a:hover {
+  text-decoration: underline;
+}
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  display: none;
+  transition: background 0.3s ease;
+}
+
+#backToTop:hover {
+  background: #3730a3; /* darker shade */
+}
+
